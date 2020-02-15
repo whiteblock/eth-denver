@@ -27,6 +27,7 @@ services:
 tests:
   - name: simple-prysm-exercise
     description: "run a prysm testnet and validate some blocks"
+    wait-for: 10 m
     system:
       - name: beacon-node-deploy
         type: prysm-beacon
@@ -34,6 +35,3 @@ tests:
       - name: validator-deploy
         type: prysm-validator
         count: 1
-    phases:
-      - name: basic
-        duration: 10 m
