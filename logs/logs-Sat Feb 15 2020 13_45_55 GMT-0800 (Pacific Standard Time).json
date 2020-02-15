@@ -1,0 +1,92 @@
+[
+  {
+    "timestamp": "2020-02-15T20:24:27.874Z",
+    "item": {
+      "text": "time=\"2020-02-15 20:24:27\" level=info msg=\"Processing block 423/265322 - estimated time remaining 490h33m13s\" blocksPerSecond=0.1 peers=\"10/17\" prefix=initial-sync"
+    },
+    "container": "prysm-beacon-service0",
+    "image": "gcr.io/prysmaticlabs/prysm/beacon-chain:latest",
+    "tag": "ea655ccc1a63"
+  },
+  {
+    "timestamp": "2020-02-15T20:24:27.874Z",
+    "item": {
+      "text": "time=\"2020-02-15 20:24:27\" level=info msg=\"Processing block 424/265322 - estimated time remaining 367h54m50s\" blocksPerSecond=0.2 peers=\"10/17\" prefix=initial-sync"
+    },
+    "container": "prysm-beacon-service0",
+    "image": "gcr.io/prysmaticlabs/prysm/beacon-chain:latest",
+    "tag": "ea655ccc1a63"
+  },
+  {
+    "timestamp": "2020-02-15T20:24:27.874Z",
+    "item": {
+      "text": "time=\"2020-02-15 20:24:27\" level=info msg=\"Connected to eth1 proof-of-work chain\" endpoint=\"wss://goerli.prylabs.net/websocket\" prefix=powchain"
+    },
+    "container": "prysm-beacon-service0",
+    "image": "gcr.io/prysmaticlabs/prysm/beacon-chain:latest",
+    "tag": "ea655ccc1a63"
+  },
+  {
+    "timestamp": "2020-02-15T20:24:28.571Z",
+    "item": {
+      "text": "time=\"2020-02-15 20:24:28\" level=info msg=\"Processing block 428/265322 - estimated time remaining 294h19m36s\" blocksPerSecond=0.2 peers=\"10/17\" prefix=initial-sync"
+    },
+    "container": "prysm-beacon-service0",
+    "image": "gcr.io/prysmaticlabs/prysm/beacon-chain:latest",
+    "tag": "ea655ccc1a63"
+  },
+  {
+    "timestamp": "2020-02-15T20:24:28.857Z",
+    "item": {
+      "text": "time=\"2020-02-15 20:24:28\" level=warning msg=\"eth1 client is not syncing\" prefix=powchain"
+    },
+    "container": "prysm-beacon-service0",
+    "image": "gcr.io/prysmaticlabs/prysm/beacon-chain:latest",
+    "tag": "ea655ccc1a63"
+  },
+  {
+    "timestamp": "2020-02-15T20:24:28.857Z",
+    "item": {
+      "text": "time=\"2020-02-15 20:24:28\" level=info msg=\"Processing block 431/265322 - estimated time remaining 245h16m10s\" blocksPerSecond=0.3 peers=\"10/17\" prefix=initial-sync"
+    },
+    "container": "prysm-beacon-service0",
+    "image": "gcr.io/prysmaticlabs/prysm/beacon-chain:latest",
+    "tag": "ea655ccc1a63"
+  },
+  {
+    "timestamp": "2020-02-15T20:24:29.270Z",
+    "item": {
+      "text": "time=\"2020-02-15 20:24:28\" level=info msg=\"Processing block 432/265322 - estimated time remaining 210h13m48s\" blocksPerSecond=0.3 peers=\"10/17\" prefix=initial-sync"
+    },
+    "container": "prysm-beacon-service0",
+    "image": "gcr.io/prysmaticlabs/prysm/beacon-chain:latest",
+    "tag": "ea655ccc1a63"
+  },
+  {
+    "timestamp": "2020-02-15T20:24:29.270Z",
+    "item": {
+      "text": "time=\"2020-02-15 20:24:29\" level=info msg=\"Processing block 433/265322 - estimated time remaining 183h57m2s\" blocksPerSecond=0.4 peers=\"10/17\" prefix=initial-sync"
+    },
+    "container": "prysm-beacon-service0",
+    "image": "gcr.io/prysmaticlabs/prysm/beacon-chain:latest",
+    "tag": "ea655ccc1a63"
+  },
+  {
+    "timestamp": "2020-02-15T20:24:29.904Z",
+    "item": {
+      "text": "time=\"2020-02-15 20:24:29\" level=warning msg=\"eth1 client is not syncing\" prefix=powchain"
+    },
+    "container": "prysm-beacon-service0",
+    "image": "gcr.io/prysmaticlabs/prysm/beacon-chain:latest",
+    "tag": "ea655ccc1a63"
+  },
+  {
+    "timestamp": "2020-02-15T20:24:29.904Z",
+    "item": {
+      "text": "time=\"2020-02-15 20:24:29\" level=info msg=\"Processing block 434/265322 - estimated time remaining 163h30m40s\" blocksPerSecond=0.5 peers=\"10/17\" prefix=initial-sync"
+    },
+    "container": "prysm-beacon-service0",
+    "image": "gcr.io/prysmaticlabs/prysm/beacon-chain:latest",
+    "tag": "ea655ccc1a63"
+  }
+]
