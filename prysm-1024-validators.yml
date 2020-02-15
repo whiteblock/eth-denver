@@ -1,0 +1,63 @@
+services:
+  - name: prysm-beacon
+    image: gcr.io/prysmaticlabs/prysm/beacon-chain:latest
+    args:
+      - --datadir=/data
+      - --interop-num-validators=1024
+      - --no-discovery
+      - --interop-eth1data-votes
+      - --enable-attestation-cache
+      - --enable-ssz-cache
+      - --enable-skip-slots-cache
+    resources:
+      cpus: 4
+      memory: 4 GB
+      storage: 10 GiB
+  - name: prysm-validator
+    image: gcr.io/prysmaticlabs/prysm/validator:latest
+    args:
+      - --keymanager=interop
+      - --keymanageropts={"keys":1024}
+      - --no-discovery
+      - --interop-eth1data-votes
+    resources:
+      cpus: 1
+      memory: 1 GB
+      storage: 1 GiB
+tests:
+  - name: simple-prysm-exercise
+    description: "run a prysm testnet and validate some blocks"
+    system:
+      - name: beacon-node-deploy
+        type: prysm-beacon
+        count: 1
+    phases:
+      - name: basic
+        tasks:
+          - type: testnet-expiration
+            timeout: 5 m
+    system:
+      - name: validator-deploy
+        type: prysm-validator
+        count: 1
+    phases:
+      - name: basic
+        tasks:
+          - type: testnet-expiration
+            timeout: 11 m  
+task-runners:
+  - name: testnet-expiration
+    script: 
+      inline: sleep 600
+tests:
+  - name: simple-prysm-exercise
+    description: run a prysm testnet and validate some blocks
+    system:
+      - name: beacon-node-testnet
+        type: prysm-beacon
+        count: 4
+    phases:
+      - name: basic
+        tasks:
+          - type: testnet-expiration
+            timeout: 11 m
