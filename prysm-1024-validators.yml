@@ -31,33 +31,9 @@ tests:
       - name: beacon-node-deploy
         type: prysm-beacon
         count: 1
-    phases:
-      - name: basic
-        tasks:
-          - type: testnet-expiration
-            timeout: 5 m
-    system:
       - name: validator-deploy
         type: prysm-validator
         count: 1
     phases:
       - name: basic
-        tasks:
-          - type: testnet-expiration
-            timeout: 11 m  
-task-runners:
-  - name: testnet-expiration
-    script: 
-      inline: sleep 600
-tests:
-  - name: simple-prysm-exercise
-    description: run a prysm testnet and validate some blocks
-    system:
-      - name: beacon-node-testnet
-        type: prysm-beacon
-        count: 4
-    phases:
-      - name: basic
-        tasks:
-          - type: testnet-expiration
-            timeout: 11 m
+        duration: 10 m
