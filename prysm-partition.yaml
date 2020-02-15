@@ -1,0 +1,58 @@
+services:
+  - name: prysm-beacon
+    image: gcr.io/prysmaticlabs/prysm/beacon-chain:latest
+    args:
+      - --datadir=/data
+      - --init-sync-no-verify
+    resources:
+      cpus: 2
+      memory: 2 GB
+      storage: 5 GiB
+task-runners:
+  - name: testnet-expiration
+    script: 
+      inline: sleep 600
+tests:
+  - name: prysm-partition
+    description: first test - run two prysm nodes on the common-network
+    phases:
+      - name: start
+        description: start the remaining node(s)
+        system:
+          - type: prysm-beacon
+            count: 1
+            resources:
+              networks:
+                - name: common-network
+          - type: prysm-beacon
+            count: 1
+            resources:
+              networks:
+                - name: common-network
+        duration: 10 m
+      - name: partition
+        description: partition the remaining node(s)
+        system:
+          - type: prysm-beacon
+            resources:
+              networks:
+                - name: common-network
+          - type: prysm-beacon
+            resources:
+              networks:
+                - name: common-network2
+        duration: 10 m
+      - name: reconnect
+        description: reconnect the remaining node(s)
+        system:
+          - type: prysm-beacon
+            count: 1
+            resources:
+              networks:
+                - name: common-network
+          - type: prysm-beacon
+            count: 1
+            resources:
+              networks:
+                - name: common-network
+        duration: 10 m
