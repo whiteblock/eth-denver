@@ -20,6 +20,7 @@ services:
       - --keymanageropts={"keys":1024}
       - --no-discovery
       - --interop-eth1data-votes
+      - --password=password
     resources:
       cpus: 1
       memory: 1 GB
