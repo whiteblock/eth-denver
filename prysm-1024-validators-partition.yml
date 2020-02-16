@@ -26,7 +26,7 @@ services:
 tests:
   - name: simple-prysm-exercise
     description: "run a prysm testnet and validate some blocks"
-    wait-for: 10 m #wait for this amount of time before starting validators
+    wait-for: 1 m #wait for this amount of time before starting validators
     system:
       - type: beacon-node
         count: 1
@@ -70,7 +70,7 @@ tests:
             resources:
               networks:
                 - name: common-network2
-        duration: 10 m
+        duration: 5 m
       - name: merge
         system:
           - type: beacon-node
@@ -89,5 +89,5 @@ tests:
             resources:
               networks:
                 - name: common-network
-        duration: 10 m
+        duration: 5 m
 
