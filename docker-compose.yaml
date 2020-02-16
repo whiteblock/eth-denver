@@ -4,7 +4,8 @@ services:
     build:
       context: .
       dockerfile: beacon.Dockerfile
-    container_name: beacon-node
+    # this matches the name that genesis will give this node
+    container_name: beacon-node-service0
     image: gcr.io/whiteblock/ethdenver-prysm-beacon-node:latest
     ports:
      - '4000:4000'
@@ -13,7 +14,8 @@ services:
     build:
       context: .
       dockerfile: validator.Dockerfile
-    container_name: validator
+    # this matches the name that genesis will give this node
+    container_name: validator-service0
     restart: always
     image: gcr.io/whiteblock/ethdenver-prysm-validator:latest
 # volumes:
