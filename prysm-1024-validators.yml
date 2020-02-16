@@ -19,6 +19,12 @@ tests:
       - name: beacon-node-deploy
         type: beacon-node
         count: 1
+        resources:
+           networks:
+             - name: common-network
       - name: validator-deploy
         type: validator
         count: 1
+        resources:
+           networks:
+             - name: common-network
