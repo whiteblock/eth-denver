@@ -14,7 +14,7 @@ services:
 tests:
   - name: simple-prysm-exercise
     description: "run a prysm testnet and validate some blocks"
-    wait-for: 10 m #wait for this amount of time before starting validators
+    wait-for: 2 m #wait for this amount of time before starting validators
     system:
       - name: beacon-node-deploy
         type: beacon-node
