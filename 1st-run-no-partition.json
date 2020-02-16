@@ -1,0 +1,92 @@
+[
+  {
+    "timestamp": "2020-02-16T18:09:29.383Z",
+    "item": {
+      "text": "time=\"2020-02-16 18:09:29\" level=warning msg=\"Enabled unsafe attestation cache\" prefix=flags"
+    },
+    "container": "beacon-node-deploy-service0",
+    "image": "gcr.io/whiteblock/ethdenver-prysm-beacon-node:latest",
+    "tag": "90bfeee8d476"
+  },
+  {
+    "timestamp": "2020-02-16T18:09:29.386Z",
+    "item": {
+      "text": "time=\"2020-02-16 18:09:29\" level=info msg=\"Using custom chain parameters\" config=demo prefix=node"
+    },
+    "container": "beacon-node-deploy-service0",
+    "image": "gcr.io/whiteblock/ethdenver-prysm-beacon-node:latest",
+    "tag": "90bfeee8d476"
+  },
+  {
+    "timestamp": "2020-02-16T18:09:29.386Z",
+    "item": {
+      "text": "time=\"2020-02-16 18:09:29\" level=warning msg=\"Saving generated genesis state in database for interop testing\" prefix=interop-cold-start"
+    },
+    "container": "beacon-node-deploy-service0",
+    "image": "gcr.io/whiteblock/ethdenver-prysm-beacon-node:latest",
+    "tag": "90bfeee8d476"
+  },
+  {
+    "timestamp": "2020-02-16T18:09:29.387Z",
+    "item": {
+      "text": "2020/02/16 18:09:29 maxprocs: Updating GOMAXPROCS=4: determined from CPU quota"
+    },
+    "container": "beacon-node-deploy-service0",
+    "image": "gcr.io/whiteblock/ethdenver-prysm-beacon-node:latest",
+    "tag": "90bfeee8d476"
+  },
+  {
+    "timestamp": "2020-02-16T18:09:29.387Z",
+    "item": {
+      "text": "time=\"2020-02-16 18:09:29\" level=warning msg=\"Enabled skip slots cache.\" prefix=flags"
+    },
+    "container": "beacon-node-deploy-service0",
+    "image": "gcr.io/whiteblock/ethdenver-prysm-beacon-node:latest",
+    "tag": "90bfeee8d476"
+  },
+  {
+    "timestamp": "2020-02-16T18:09:29.387Z",
+    "item": {
+      "text": "time=\"2020-02-16 18:09:29\" level=info msg=\"Fetching testnet cluster address\" endpoint=\"https://prylabs.net/contract\" prefix=node"
+    },
+    "container": "beacon-node-deploy-service0",
+    "image": "gcr.io/whiteblock/ethdenver-prysm-beacon-node:latest",
+    "tag": "90bfeee8d476"
+  },
+  {
+    "timestamp": "2020-02-16T18:09:33.629Z",
+    "item": {
+      "text": "time=\"2020-02-16 18:09:33\" level=info msg=\"Starting beacon node\" prefix=node version=\"Prysm/Git commit: 7899dc115e5c93c2671493744b4ab7dce201ff99. Built at: 2020-02-15 22:50:57+00:00\""
+    },
+    "container": "beacon-node-deploy-service0",
+    "image": "gcr.io/whiteblock/ethdenver-prysm-beacon-node:latest",
+    "tag": "90bfeee8d476"
+  },
+  {
+    "timestamp": "2020-02-16T18:09:33.630Z",
+    "item": {
+      "text": "time=\"2020-02-16 18:09:33\" level=info msg=\"Collecting metrics at endpoint\" endpoint=\":8080\" prefix=prometheus"
+    },
+    "container": "beacon-node-deploy-service0",
+    "image": "gcr.io/whiteblock/ethdenver-prysm-beacon-node:latest",
+    "tag": "90bfeee8d476"
+  },
+  {
+    "timestamp": "2020-02-16T18:09:33.631Z",
+    "item": {
+      "text": "time=\"2020-02-16 18:09:33\" level=info msg=\"Chain started within the last epoch - not syncing\" prefix=initial-sync"
+    },
+    "container": "beacon-node-deploy-service0",
+    "image": "gcr.io/whiteblock/ethdenver-prysm-beacon-node:latest",
+    "tag": "90bfeee8d476"
+  },
+  {
+    "timestamp": "2020-02-16T18:09:33.630Z",
+    "item": {
+      "text": "time=\"2020-02-16 18:09:33\" level=info msg=\"Node started p2p server\" multiAddr=\"/ip4/10.0.4.5/tcp/13000/p2p/16Uiu2HAm5gvojiLfqBqHVuGidozD439AwdEtESAW66ij4x6T4PpB\" prefix=p2p"
+    },
+    "container": "beacon-node-deploy-service0",
+    "image": "gcr.io/whiteblock/ethdenver-prysm-beacon-node:latest",
+    "tag": "90bfeee8d476"
+  }
+]
