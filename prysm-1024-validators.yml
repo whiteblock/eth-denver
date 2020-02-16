@@ -17,10 +17,9 @@ services:
     image: gcr.io/prysmaticlabs/prysm/validator:latest
     args:
       - --keymanager=interop
-      - --keymanageropts={"keys":1024}
-      - --no-discovery
-      - --interop-eth1data-votes
-      - --password=password
+      - --keymanageropts='{"keys":1024}'
+      - --bootstrap-node='/dns4/prysm-beacon/tcp/13000/p2p/16Uiu2HAmCKyAFZpQ8vXtepfdkCwKEbTEwKTY3XeE4aVmer4xgnyC'
+      - --beacon-rpc-provider=prysm-beacon:4000
     resources:
       cpus: 1
       memory: 1 GB
