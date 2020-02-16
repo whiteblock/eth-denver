@@ -1,15 +1,19 @@
 version: '3'
 services:
   beacon-node:
+    build:
+      context: .
+      dockerfile: beacon.Dockerfile
     container_name: beacon-node
-    image: gcr.io/prysmaticlabs/prysm/beacon-chain:latest
+    image: gcr.io/whiteblock/ethdenver-prysm-beacon-node:latest
     ports:
      - '4000:4000'
      - '13000:13000'
-    command: ["--datadir=/data", "--interop-num-validators=1024", "--no-discovery", "--interop-eth1data-votes", "--enable-attestation-cache", "--enable-ssz-cache", "--enable-skip-slots-cache"]
   validator:
+    build:
+      context: .
+      dockerfile: validator.Dockerfile
     container_name: validator
     restart: always
-    image: gcr.io/prysmaticlabs/prysm/validator:latest
-    command: ["--keymanager=interop", "--keymanageropts='{\"keys\":1024}'", "--bootstrap-node='/dns4/beacon-node/tcp/13000/p2p/16Uiu2HAmCKyAFZpQ8vXtepfdkCwKEbTEwKTY3XeE4aVmer4xgnyC'", "--beacon-rpc-provider=beacon-node:4000"]
+    image: gcr.io/whiteblock/ethdenver-prysm-validator:latest
 # volumes:
