@@ -14,17 +14,27 @@ services:
 tests:
   - name: simple-prysm-exercise
     description: "run a prysm testnet and validate some blocks"
-    wait-for: 10 m
-    system:
-      - name: beacon-node-deploy
-        type: beacon-node
-        count: 1
-        resources:
-           networks:
-             - name: common-network
-      - name: validator-deploy
-        type: validator
-        count: 1
-        resources:
-           networks:
-             - name: common-network
+    phases:
+      - name: start-beacon-node
+        description: let beacon node initialize
+        system:
+          - name: beacon-node-deploy
+            type: beacon-node
+            count: 1
+            resources:
+               networks:
+                 - name: common-network
+      - name: run beacon-node and validator
+        system:
+          - name: beacon-node-deploy
+            type: beacon-node
+            count: 1
+            resources:
+               networks:
+                 - name: common-network
+          - name: validator-deploy
+            type: validator
+            count: 1
+            resources:
+               networks:
+                 - name: common-network
