@@ -1,11 +1,11 @@
 services:
-  - name: prysm-beacon
+  - name: beacon-node
     image: gcr.io/whiteblock/ethdenver-prysm-beacon-node:latest
     resources:
       cpus: 4
       memory: 4 GB
       storage: 10 GiB
-  - name: prysm-validator
+  - name: validator
     image: gcr.io/whiteblock/ethdenver-prysm-validator:latest
     resources:
       cpus: 1
@@ -17,8 +17,8 @@ tests:
     wait-for: 10 m
     system:
       - name: beacon-node-deploy
-        type: prysm-beacon
+        type: beacon-node
         count: 1
       - name: validator-deploy
-        type: prysm-validator
+        type: validator
         count: 1
