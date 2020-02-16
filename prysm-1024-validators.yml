@@ -24,6 +24,7 @@ tests:
              - name: common-network
     phases:
       - name: validators
+        duration: 2 h
         system:
         - name: validator-deploy
           type: validator
